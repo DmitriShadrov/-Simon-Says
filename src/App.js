@@ -35,7 +35,7 @@ function App() {
 
   useEffect(() => {
     if (isOn && play.isDisplay) {
-      let newColor = colorList[Math.floor(Math.random() * 4)];
+      let newColor = colorList[Math.floor(Math.random() * 4)];// floor
 
       const copyColors = [...play.colors];
       copyColors.push(newColor);
@@ -109,7 +109,7 @@ function App() {
         {isOn && !play.isDisplay && !play.userPlay && play.score && (
           <div className='lost'>
             <div> Final score: {play.score}</div>
-            <button onClick={closeHandle}>Close</button>
+            <button onClick={closeHandle} className="close">Close</button>
           </div>
         )}
         { !isOn && !play.score && (
